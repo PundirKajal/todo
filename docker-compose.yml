@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: todo-postgres-1
+    image: postgres:12.1-alpine
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: todo
+    command: -p 5434
+  pgadmin:
+    container_name: todo-pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@todo.com
+      PGADMIN_DEFAULT_PASSWORD: pass
+    ports:
+      - "3005:80"
+
+    
