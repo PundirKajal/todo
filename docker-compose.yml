@@ -18,5 +18,16 @@ services:
       PGADMIN_DEFAULT_PASSWORD: pass
     ports:
       - "3005:80"
+  api:
+    container_name: todo_api
+    build:
+      context: ./api
+    ports:
+      - "3006:8080"
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+    env_file:
+      - ./api/.env
 
     
