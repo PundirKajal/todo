@@ -29,5 +29,7 @@ services:
       - /app/node_modules
     env_file:
       - ./api/.env
+    depends_on:
+      - db
 
     
