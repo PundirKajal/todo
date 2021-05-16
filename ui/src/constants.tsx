@@ -11,3 +11,5 @@ export const NavbarOptions = [
         path: '/Task'
     }
 ]
+
+export const ServerURL = process.env.Host || 'http://localhost:3006';
