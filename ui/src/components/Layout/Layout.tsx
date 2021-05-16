@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Header from "../Header";
+import Menu from "../Menu";
+import * as S from "./style";
 
 const Layout = ({ children }) => {
     return (
@@ -7,14 +9,15 @@ const Layout = ({ children }) => {
             <Head>
                 <title>To Do</title>
             </Head>
-            <header style={{
-                background: 'cadetblue',
-                height: "4rem",
-                width: "100vw"
-            }}>
-                <Header/>
-            </header>
-            <main>{children}</main>
+            <S.HeaderContainer>
+                <Header />
+            </S.HeaderContainer>
+            <S.Main>
+                <Menu />
+                <S.Container>
+                    {children}
+                </S.Container>
+            </S.Main>
         </div>
     )
 }

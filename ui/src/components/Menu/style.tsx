@@ -5,5 +5,22 @@ export const Base = styled.div`
     background: cadetblue;
     color: white;
     height: 90vh;
-    margin: 5px 0;
+    margin: 5px 5px 0px 0;
+`;
+
+export const Navbar = styled.nav`
+    font-size: 24px;
+`;
+
+export const NavbarList = styled.ul`
+    padding: 10px;
+`;
+
+export const NavbarItem = styled.li`
+    padding: 10px;
+
+    &:hover {
+        background: #38999c;
+        font-weight: 500;
+    }
 `;
