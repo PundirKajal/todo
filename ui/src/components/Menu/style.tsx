@@ -24,3 +24,14 @@ export const NavbarItem = styled.li`
         font-weight: 500;
     }
 `;
+
+export const LinkItem = styled.span`
+    display: flex;
+    align-items: center;
+`;
+
+export const Icon = styled.span`
+    margin: 10px;
+    font-size: 20px;
+    display: flex;
+`;
