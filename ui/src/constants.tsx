@@ -15,4 +15,4 @@ export const NavbarOptions = [
     }
 ]
 
-export const ServerURL = process.env.Host || 'http://localhost:3006';
+export const ServerURL = process.env.Host || 'http://api';
