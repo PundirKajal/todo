@@ -4,8 +4,7 @@ import { ConfigService } from '@nestjs/config';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule);
-  app.enableCors();
+  const app = await NestFactory.create(AppModule, { cors: true});
   const configService = app.get(ConfigService);
   const port = configService.get('PORT');
   const document = SwaggerModule.createDocument(
