@@ -15,4 +15,4 @@ export const NavbarOptions = [
     }
 ]
 
-export const ServerURL = process.env.Host || 'http://api:8080';
+export const ServerURL = process.env.Host || 'http://api';

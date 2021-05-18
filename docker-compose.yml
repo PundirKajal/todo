@@ -23,7 +23,7 @@ services:
     build:
       context: ./api
     ports:
-      - "3006:8080"
+      - "3006:80"
     volumes:
       - ./api:/app
       - /app/node_modules
