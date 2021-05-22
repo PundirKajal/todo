@@ -23,7 +23,7 @@ services:
     build:
       context: ./api
     ports:
-      - "3006:8080"
+      - "3006:80"
     volumes:
       - ./api:/app
       - /app/node_modules
@@ -31,5 +31,15 @@ services:
       - ./api/.env
     depends_on:
       - db
-
-    
+  ui:
+    container_name: ui
+    build:
+      context: ./ui
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./ui:/app
+      - /app/node_modules
+    depends_on:
+      - db
+      - api
