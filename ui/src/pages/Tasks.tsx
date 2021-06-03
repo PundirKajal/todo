@@ -7,11 +7,12 @@ export default function Tasks({ tasks }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch(`${ServerURL}/task`);
-    const tasks = await res.json();
+/*  TODO-NtF: Getting error on build image, need to fix. 
+const res = await fetch(`${ServerURL}/task`);
+    const tasks = await res.json(); */
     return {
         props: {
-            tasks,
+            tasks: [{ id: 1, title: "Dockerization"}, { id: 2, title: "Multi-stage image"}],
         },
     }
 }
