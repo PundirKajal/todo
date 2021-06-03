@@ -37,7 +37,7 @@ services:
       context: ./ui
       dockerfile: Dockerfile-prod
     ports:
-      - "3000:3000"
+      - "3000:80"
     volumes:
       - ./ui:/app
       - /app/node_modules
